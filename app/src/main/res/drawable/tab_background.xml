@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tab_background.xml -->
+<!-- tab_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/white" /> <!-- Background color of the tab -->
+    <stroke
+        android:width="1dp"
+        android:color="@color/black" /> <!-- Border color -->
+</shape>
+

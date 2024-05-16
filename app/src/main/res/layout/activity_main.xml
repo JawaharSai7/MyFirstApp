@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/background_color"
+            android:padding="16dp">
+
+            <!-- Search Bar -->
+            <LinearLayout
+                android:id="@+id/searchLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Back Icon -->
+
+                <!-- Search EditText -->
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Search"
+                    android:textSize="20sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/black"
+                    android:maxLines="1" />
+
+                <!-- Clear Icon -->
+
+                <ImageView
+                    android:id="@+id/categoryFolder1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_search_24" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Results for &quot;Search&quot;"
+                android:layout_marginTop="90dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+            <!-- Slide Button -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayoutFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView11"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabTextColor="@color/black">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="-20dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="All" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="-13dp"
+                    android:layout_marginBottom="47dp"
+                    android:text="My Notes" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView11"
+                android:background="@color/white"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/black" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="40 items"
+                android:layout_marginTop="125dp"/>
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Categories"
+                android:layout_marginTop="170dp"
+                android:textSize="25sp"/>
+
+            <!-- RecyclerView for Categories -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView13"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewCategories"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:text="Titles"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView14"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:text="8 items"/>
+
+            <!-- Second RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSecond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewCategories"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:id="@+id/notebookRecyclerViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="550dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/NotebookIconId"
+                    android:layout_width="37dp"
+                    android:layout_height="74dp"
+                    android:layout_gravity="top"
+                    android:layout_below="@id/notebookRecyclerViewId"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/notebookicon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/NotebookId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notebook Title"
+                        android:layout_below="@id/notebookRecyclerViewId"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/category_Info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notebookRecyclerViewId"
+                        android:layout_marginTop="5dp"
+                        android:text="Category Name / Group Name 10 pages"
+                        android:textSize="16sp"/>
+
+                    <!-- RecyclerView for Notebook items -->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewNotebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notebookRecyclerViewId"
+                        android:layout_marginTop="10dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</layout>
